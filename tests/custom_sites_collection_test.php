@@ -48,7 +48,6 @@ class custom_sites_collection_test extends \phpbb_test_case
 
 		$this->assertContains('phpBB/ext/phpbb/mediaembed/collection/sites/allocine.yml', $collection);
 		$this->assertContains('phpBB/ext/phpbb/mediaembed/collection/sites/bilibili.yml', $collection);
-		$this->assertContains('phpBB/ext/phpbb/mediaembed/collection/sites/dotsub.yml', $collection);
 		$this->assertContains('phpBB/ext/phpbb/mediaembed/collection/sites/ok.yml', $collection);
 		$this->assertContains('phpBB/ext/phpbb/mediaembed/collection/sites/schooltube.yml', $collection);
 		$this->assertContains('phpBB/ext/phpbb/mediaembed/collection/sites/snotr.yml', $collection);
