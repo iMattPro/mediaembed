@@ -57,7 +57,7 @@ class formatter_listener implements EventSubscriberInterface
 	 *
 	 * @param config                  $config         Configuration service
 	 * @param db_text                 $config_text    Text configuration service
-	 * @param customsitescollection  $custom_sites   Custom site definitions
+	 * @param customsitescollection   $custom_sites   Custom site definitions
 	 * @param upstreamsitescollection $upstream_sites Upstream site definitions
 	 * @param string                  $cache_dir      Media scraping cache directory
 	 */
