@@ -17,10 +17,13 @@
 
 <form id="mediaembed_manage" method="post" action="{{ U_ACTION }}" data-ajax="true">
 	{% if MEDIA_SITES %}
-		<p class="mediaembed-site-filter">
-			<label for="mediaembed-site-filter"><strong>{{ lang('SEARCH') ~ lang('COLON') }}</strong></label>
-			<input type="search" id="mediaembed-site-filter" class="text medium" autocomplete="off" aria-controls="mediaembed-site-list" placeholder="{{ lang('SEARCH_MINI') }}">
-		</p>
+		<div class="mediaembed-site-toolbar">
+			<p class="mediaembed-site-filter">
+				<label for="mediaembed-site-filter"><strong>{{ lang('SEARCH') ~ lang('COLON') }}</strong></label>
+				<input type="search" id="mediaembed-site-filter" class="text medium" autocomplete="off" aria-controls="mediaembed-site-list" placeholder="{{ lang('SEARCH_MINI') }}">
+			</p>
+			<p class="small mediaembed-site-actions"><a href="#" data-marksites="true">{{ lang('MARK_ALL') }}</a> &bull; <a href="#" data-marksites="false">{{ lang('UNMARK_ALL') }}</a></p>
+		</div>
 	{% endif %}
 
 	<div id="mediaembed-site-list" class="mediaembed-site-grid">
@@ -36,9 +39,6 @@
 	{% if MEDIA_SITES %}
 		<div id="mediaembed-filter-empty" class="errorbox" style="display: none;">{{ lang('ACP_MEDIA_SITES_ERROR') }}</div>
 	{% endif %}
-	<fieldset class="quick">
-		<p class="small"><a href="#" data-marksites="true">{{ lang('MARK_ALL') }}</a> &bull; <a href="#" data-marksites="false">{{ lang('UNMARK_ALL') }}</a></p>
-	</fieldset>
 	<p id="buttons" class="submit-buttons">
 		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}">&nbsp;
 		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}">

@@ -1,12 +1,27 @@
+.mediaembed-site-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
 .mediaembed-site-filter {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+	flex: 1;
+	margin: 0;
 }
 
 .mediaembed-site-filter input {
 	flex: 1;
 	max-width: 32rem;
+}
+
+.mediaembed-site-actions {
+	margin: 0;
+	white-space: nowrap;
 }
 
 .mediaembed-site-grid {
