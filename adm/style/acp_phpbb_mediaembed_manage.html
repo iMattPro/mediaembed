@@ -28,7 +28,7 @@
 
 	<div id="mediaembed-site-list" class="mediaembed-site-grid">
 		{% for site in MEDIA_SITES %}
-			<label class="mediaembed-site{% if site.disabled %} mediaembed-site-disabled{% endif %}" data-media-site title="{{ site.title }}">
+			<label class="mediaembed-site{% if site.disabled %} mediaembed-site-disabled{% endif %}" data-media-site="{{ (site.name ~ ' ' ~ site.id)|escape('html_attr') }}" title="{{ site.title }}">
 				<input type="checkbox" class="radio" name="mark[]" value="{{ site.id }}"{% if site.disabled %} disabled{% elseif site.enabled %} checked{% endif %}>
 				<span>{{ site.name }}</span>
 			</label>

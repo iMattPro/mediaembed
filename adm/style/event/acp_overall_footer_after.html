@@ -12,8 +12,7 @@
 
 				$('#mediaembed-site-list [data-media-site]').each(function() {
 					var $site = $(this);
-					var $checkbox = $site.find('input[name="mark[]"]');
-					var searchableText = ($site.text() + ' ' + $checkbox.val()).toLowerCase();
+					var searchableText = $site.attr('data-media-site').toLowerCase();
 					var match = !query || searchableText.indexOf(query) !== -1;
 
 					$site.toggle(match);
